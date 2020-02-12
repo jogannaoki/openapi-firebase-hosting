@@ -1,0 +1,12 @@
+{
+  "name": "openapi-firebase-hosting",
+  "version": "1.0.0",
+  "author": "jogan.naoki",
+  "scripts": {
+    "functions:install": "cd functions && yarn install",
+    "generate:app": "redoc-cli bundle docs/specs/app.yaml --output functions/static/app.html"
+  },
+  "dependencies": {
+    "redoc-cli": "^0.9.6"
+  }
+}
