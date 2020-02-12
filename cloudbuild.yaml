@@ -1,0 +1,12 @@
+steps:
+    - name: node:10.18
+      entrypoint: yarn
+      args: ['install']
+    - name: node:10.18
+      entrypoint: yarn
+      args: ['functions:install']
+    - name: node:10.18
+      entrypoint: yarn
+      args: ['generate:app']
+    - name: 'gcr.io/$PROJECT_ID/firebase'
+      args: ['deploy', '--project', $PROJECT_ID]
